@@ -2,6 +2,8 @@
 #include "matrix_utility.hpp"
 #include "strasssen.hpp"
 
+#include <ctime>
+
 int main() {
     // Initialisation of a 3*3 matrix with base value 2
     matrix<int> B(3, 3, 2);
@@ -66,8 +68,17 @@ int main() {
         std::cout << "QR Decomposition Failed :(" << std::endl;
     }
 
-    matrix<int> A_M = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, 
-                B_M = {{1, 3, 2}, {5, 5, 6}, {2, 7, 6}};
-    std::cout << "Normal Multiplication :\n" << A_M * B_M;
-    std::cout << "Strassen Multiplication:\n" << strassen::operator*(A_M, B_M);
+    matrix<int> A_M = random_matrix<int>(300, 300); 
+    matrix<int> B_M = random_matrix<int>(300, 300);
+    std::chrono::time_point<std::chrono::system_clock> start, end;
+    start = std::chrono::system_clock::now();
+    matrix<int> normal = A_M * B_M;
+    end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed_seconds_normal = end - start;
+    std::cout << "Time taken in normal method: " << elapsed_seconds_normal.count() << std::endl;
+    start = std::chrono::system_clock::now();
+    matrix<int> strassen = strassen::operator*(A_M, B_M);
+    end = std::chrono::system_clock::now();
+    std::chrono::duration<double> elapsed_seconds_strassen = end - start;
+    std::cout << "Time taken in normal method: " << elapsed_seconds_strassen.count() << std::endl;
 }

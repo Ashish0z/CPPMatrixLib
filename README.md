@@ -38,3 +38,7 @@ The Big Picture:
 * Add functionality to solve Linear Equations (A*X = B)
 * Add documentation
 * Depict its use in solving Linear Recurrences as an example solve [Project Euler 258](https://projecteuler.net/problem=258)
+
+#### Results of Strssen Implementation
+Time taken in normal method: 0.536796
+Time taken in normal method: 62.9779
