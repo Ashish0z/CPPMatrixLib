@@ -1,15 +1,25 @@
 #include "matrix.hpp"
 #include "matrix_utility.hpp"
+<<<<<<< HEAD
 #include "strasssen.hpp"
 
 #include <ctime>
+=======
+#include "strassen.hpp"
+#include <chrono>
+>>>>>>> ab3031e7ae7c2a71e7641b406b6bb2e946406be2
 
 int main() {
+	
     // Initialisation of a 3*3 matrix with base value 2
     matrix<int> B(3, 3, 2);
 
+    std::cout<<B<<"\n";
+
     // Exponentiation
     matrix<int> M = pow(B, 3);
+
+    std::cout<<M<<"\n";
 
     // edit single element
     M(1, 0) = 1;
@@ -49,7 +59,7 @@ int main() {
     std::cout << "matrix c1: \n" << c1 << std::endl;
 
     // Matrix columns
-    matrix<double> r1 = D.row(0);
+    matrix<double> r1 = D.row(2);
     std::cout << "matrix r1: \n" << r1 << std::endl;
 
     // Test QR decomposition:
@@ -67,6 +77,7 @@ int main() {
     else {
         std::cout << "QR Decomposition Failed :(" << std::endl;
     }
+<<<<<<< HEAD
 
     matrix<int> A_M = random_matrix<int>(300, 300); 
     matrix<int> B_M = random_matrix<int>(300, 300);
@@ -81,4 +92,29 @@ int main() {
     end = std::chrono::system_clock::now();
     std::chrono::duration<double> elapsed_seconds_strassen = end - start;
     std::cout << "Time taken in normal method: " << elapsed_seconds_strassen.count() << std::endl;
+=======
+    
+    //checking strassen
+    matrix<double> m1(300, 300, 0);
+    matrix<double> m2(300, 300, 0);
+    srand(time(0));
+    for (int i = 0; i < 300; i++)
+        for (int j = 0; j < 300; j++){
+            m1(i, j) = (random() + 1) % 100;
+            m2(i, j) = (random() + 1) % 100;
+        }
+    std::cout << std::endl;
+    std::chrono::time_point<std::chrono::system_clock> start1 = std::chrono::system_clock::now();
+    matrix<double> temp = m1*m2;
+    std::chrono::time_point<std::chrono::system_clock> end1 = std::chrono::system_clock::now();
+    std::chrono::duration<double> duration1 = end1 - start1;
+    std::cout << "Time taken using naive method :"<< duration1.count() << std::endl;
+    std::chrono::time_point<std::chrono::system_clock> start2 = std::chrono::system_clock::now();
+    temp = strassen::operator*(m1,m2);
+    std::chrono::time_point<std::chrono::system_clock> end2 = std::chrono::system_clock::now();
+    std::chrono::duration<double> duration2= end2 - start2;
+    std::cout << "Time taken using strassen :" << duration2.count();
+
+    return 0;
+>>>>>>> ab3031e7ae7c2a71e7641b406b6bb2e946406be2
 }
