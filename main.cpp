@@ -1,5 +1,6 @@
 #include "matrix.hpp"
 #include "matrix_utility.hpp"
+#include "gauss_elim.hpp"
 
 int main() {
     // Initialisation of a 3*3 matrix with base value 2
@@ -64,4 +65,11 @@ int main() {
     else {
         std::cout << "QR Decomposition Failed :(" << std::endl;
     }
+
+    //testing gauss elim 
+    matrix<double> A = {{3, 2, 1, 3}, 
+                     {2, 1, 1, 0},
+                     {6, 2, 4, 6}};
+    gauss_elim(A);
+    std::cout << A;
 }
