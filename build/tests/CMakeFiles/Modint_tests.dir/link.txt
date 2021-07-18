@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Modint_tests.dir/MatrixTests.cpp.o CMakeFiles/Modint_tests.dir/main.cpp.o  -o Modint_tests ../lib/libgtestd.a ../src/libModint_lib.a -lpthread 

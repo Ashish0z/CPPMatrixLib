@@ -1,24 +1,20 @@
-cmake_minimum_required(VERSION 3.14)
-set(This Matrix)
+set(BINARY ${CMAKE_PROJECT_NAME}_tests)
 
-project(${This} C CXX)
+set(Sources
 
-# GoogleTest requires at least C++11
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_C_STANDARD 99)
-
-enable_testing()
-
-add_subdirectory(googletest)
-
-set(Headers
-
-    ../matrix.hpp
-    ../matrix_utility.hpp
+    MatrixTests.cpp
+    main.cpp
 )
 
-add_library(${This} STATIC ${Headers})
+add_executable(${BINARY} ${Sources})
 
-add_subdirectory(test)
+target_link_libraries(${BINARY} PUBLIC
+    gtest
+    ${CMAKE_PROJECT_NAME}_lib
+)
 
-set_target_properties(${This} PROPERTIES LINKER_LANGUAGE CXX)
+add_test(
+
+    NAME ${BINARY}
+    COMMAND ${BINARY}
+)

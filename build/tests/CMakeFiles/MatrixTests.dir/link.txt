@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/MatrixTests.dir/MatrixTests.cpp.o  -o MatrixTests ../lib/libgtest_maind.a -lMatrix ../lib/libgtestd.a -lpthread 

@@ -1,8 +1,9 @@
 # CMake generated Testfile for 
-# Source directory: C:/Users/parth/Desktop/SoC/CPPMatrixLib/tests
-# Build directory: C:/Users/parth/Desktop/SoC/CPPMatrixLib/build
+# Source directory: /home/ashish/Desktop/CPPMatrixLib
+# Build directory: /home/ashish/Desktop/CPPMatrixLib/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs("googletest")
-subdirs("test")
+subdirs("src")
+subdirs("tests")
+subdirs("extern/googletest")

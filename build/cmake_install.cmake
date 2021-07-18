@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/parth/Desktop/SoC/CPPMatrixLib/tests
+# Install script for directory: /home/ashish/Desktop/CPPMatrixLib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Matrix")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,24 +27,22 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+# Install shared libraries without execute permission?
+if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
+endif()
+
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/objdump.exe")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("C:/Users/parth/Desktop/SoC/CPPMatrixLib/build/googletest/cmake_install.cmake")
-endif()
+  # Include the install script for each subdirectory.
+  include("/home/ashish/Desktop/CPPMatrixLib/build/src/cmake_install.cmake")
+  include("/home/ashish/Desktop/CPPMatrixLib/build/tests/cmake_install.cmake")
+  include("/home/ashish/Desktop/CPPMatrixLib/build/extern/googletest/cmake_install.cmake")
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("C:/Users/parth/Desktop/SoC/CPPMatrixLib/build/test/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +53,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/parth/Desktop/SoC/CPPMatrixLib/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ashish/Desktop/CPPMatrixLib/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
