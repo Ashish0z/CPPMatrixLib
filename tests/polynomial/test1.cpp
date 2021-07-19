@@ -44,31 +44,31 @@ INSTANTIATE_TEST_CASE_P(AdditionTests, FloatPolyTests,
 	testing::Values(
 /*0*/	SamplePolyTest<double>( 1, 0.0182, 3, 0.0948, 3),
 /*1*/	SamplePolyTest<double>( 1, 1.2839, 3, -1.2739, 3),
-/*2*/	SamplePolyTest<double>( 1, -218'724.171, 5, 313.458'291, 3),
-/*3*/	SamplePolyTest<double>( 1, 483.173'198'482'947, 5, -593.206'583'069'789, 3),
+/*2*/	SamplePolyTest<double>( 1, -218724.171, 5, 313.458291, 3),
+/*3*/	SamplePolyTest<double>( 1, 483.173198482947, 5, -593.206583069789, 3),
 /*4*/	SamplePolyTest<double>( 1, 100.33, 20, -100.33, 10),
 /*5*/	SamplePolyTest<double>( 1, 100.11, 300, -100.22, 200),
 /*6*/	SamplePolyTest<double>( 1, 100.444, 750, -100.444, 500),
-/*7*/	SamplePolyTest<double>( 1, -382'594'278.747'059'728, 3000, 587'208'068.278'698'358, 3000)
+/*7*/	SamplePolyTest<double>( 1, -382594278.747059728, 3000, 587208068.278698358, 3000)
 	));
 
 INSTANTIATE_TEST_CASE_P(SubtractionTests, FloatPolyTests,
 	testing::Values(
 /*0*/	SamplePolyTest<double>( 1, 0.0182, 3, 0.0948, 3),
 /*1*/	SamplePolyTest<double>( 1, 1.2839, 3, -1.2739, 3),
-/*2*/	SamplePolyTest<double>( 1, -218'724.171, 5, 313.458'291, 3),
-/*3*/	SamplePolyTest<double>( 1, 483.173'198'482'947, 5, -593.206'583'069'789, 3),
+/*2*/	SamplePolyTest<double>( 1, -218724.171, 5, 313.458291, 3),
+/*3*/	SamplePolyTest<double>( 1, 483.173198482947, 5, -593.206583069789, 3),
 /*4*/	SamplePolyTest<double>( 1, 100.33, 20, -100.33, 10),
 /*5*/	SamplePolyTest<double>( 1, 100.11, 300, -100.22, 200),
 /*6*/	SamplePolyTest<double>( 1, 100.444, 750, -100.444, 500),
-/*7*/	SamplePolyTest<double>( 1, -382'594'278.747'059'728, 3000, 587'208'068.278'698'358, 3000)
+/*7*/	SamplePolyTest<double>( 1, -382594278.747059728, 3000, 587208068.278698358, 3000)
 	));
 
 INSTANTIATE_TEST_CASE_P(PolyMultiplicationTests, FloatPolyTests,
 	testing::Values(
 /*0*/	SamplePolyTest<double>( 3, 0.394, 3, 0.2883, 3),
 /*1*/	SamplePolyTest<double>( 3, 1.2888, 5, -1.2844, 3),
-/*2*/	SamplePolyTest<double>( 3, -218.724'171, 7, 313.458'291, 3),
+/*2*/	SamplePolyTest<double>( 3, -218.724171, 7, 313.458291, 3),
 /*3*/	SamplePolyTest<double>( 3, 100.44, 11, -100.44, 10),
 /*4*/	SamplePolyTest<double>( 3, -100.222, 1100, -100.22, 1000),
 /*5*/	SamplePolyTest<double>( 3, 100, 5100, 100, 5000),
@@ -80,8 +80,8 @@ INSTANTIATE_TEST_CASE_P(ScalarMultiplicationTests, FloatPolyTests,
 	testing::Values(
 /*0*/	SamplePolyTest<double>( 1, 0.0182, 3, 0.0948, 3),
 /*1*/	SamplePolyTest<double>( 1, 1.2839, 3, -1.2739, 3),
-/*2*/	SamplePolyTest<double>( 1, -218'724.171, 5, 313.458'291, 3),
-/*3*/	SamplePolyTest<double>( 1, 483.173'198'482'947, 5, -593.206'583'069'789, 3),
+/*2*/	SamplePolyTest<double>( 1, -218724.171, 5, 313.458291, 3),
+/*3*/	SamplePolyTest<double>( 1, 483.173198482947, 5, -593.206583069789, 3),
 /*4*/	SamplePolyTest<double>( 1, 100.33, 20, -100.33, 10),
 /*5*/	SamplePolyTest<double>( 1, 100.11, 300, -100.22, 200),
 /*6*/	SamplePolyTest<double>( 1, 100.444, 750, -100.444, 500)
@@ -91,19 +91,19 @@ INSTANTIATE_TEST_CASE_P(EqualityTests, FloatPolyTests,
 	testing::Values(
 /*0*/	SamplePolyTest<double>( 5, 0.22222, 3, 0.22223, 3),
 /*1*/	SamplePolyTest<double>( 5, 1.000001, 3, 0.9999999, 3),
-/*2*/	SamplePolyTest<double>( 5, 313.458'291, 3, 313.458'291, 3),
-/*3*/	SamplePolyTest<double>( 5, 483.173'198'482'947, 3, -593.206'583'069'789, 3),
+/*2*/	SamplePolyTest<double>( 5, 313.458291, 3, 313.458291, 3),
+/*3*/	SamplePolyTest<double>( 5, 483.173198482947, 3, -593.206583069789, 3),
 /*4*/	SamplePolyTest<double>( 5, 100.22, 20, -100.22, 20),
 /*5*/	SamplePolyTest<double>( 5, 100.3333, 300, 100.3333, 300),
 /*6*/	SamplePolyTest<double>( 5, 100.22, 750, -100.11, 750),
-/*7*/	SamplePolyTest<double>( 5, -382.594'278'747'059'728, 3000, 587.208'068'278'698'358, 3000)
+/*7*/	SamplePolyTest<double>( 5, -382.594278747059728, 3000, 587.208068278698358, 3000)
 	));
 
 INSTANTIATE_TEST_CASE_P(KaratMultiplicationTests, FloatPolyTests,
 	testing::Values(
 /*0*/	SamplePolyTest<double>( 6, 0.394, 3, 0.2883, 3),
 /*1*/	SamplePolyTest<double>( 6, 1.2888, 5, -1.2844, 3),
-/*2*/	SamplePolyTest<double>( 6, -218.724'171, 7, 313.458'291, 3),
+/*2*/	SamplePolyTest<double>( 6, -218.724171, 7, 313.458291, 3),
 /*3*/	SamplePolyTest<double>( 6, 100.44, 11, -100.44, 10),
 /*4*/	SamplePolyTest<double>( 6, -100.222, 1100, -100.22, 1000),
 /*5*/	SamplePolyTest<double>( 6, 100, 5100, 100, 5000),
@@ -115,7 +115,7 @@ INSTANTIATE_TEST_CASE_P(CalculateTests, FloatPolyTests,
 	testing::Values(
 /*0*/	SamplePolyTest<double>( 7, 0.0182, 3, 0.0948, 3),
 /*1*/	SamplePolyTest<double>( 7, 1.2839, 3, -1.2739, 3),
-/*2*/	SamplePolyTest<double>( 7, -218'724.171, 5, 0.313'458'291, 3),
-/*3*/	SamplePolyTest<double>( 7, 483.173'198'482'947, 5, -0.593'206'583'069'789, 3),
+/*2*/	SamplePolyTest<double>( 7, -218724.171, 5, 0.313458291, 3),
+/*3*/	SamplePolyTest<double>( 7, 483.173198482947, 5, -0.593206583069789, 3),
 /*4*/	SamplePolyTest<double>( 7, 100.33, 20, -100.33, 10)
 	));

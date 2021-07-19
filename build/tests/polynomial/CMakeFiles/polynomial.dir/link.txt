@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/polynomial.dir/test1.cpp.o  -o polynomial ../../lib/libgtest_maind.a ../../src/libCPPMatrixLib_lib.a ../../lib/libgtestd.a -lpthread 

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCPPMatrixLib_lib.a  CMakeFiles/CPPMatrixLib_lib.dir/matrix_main.cpp.o
+/usr/bin/ranlib libCPPMatrixLib_lib.a
